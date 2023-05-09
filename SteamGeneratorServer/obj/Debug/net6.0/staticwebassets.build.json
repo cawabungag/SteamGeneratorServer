@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "i5OTezmvDIApoZecN1HMHURSgNZ7Y/w/RLL86Ij53IY=",
+  "Source": "SteamGeneratorServer",
+  "BasePath": "_content/SteamGeneratorServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

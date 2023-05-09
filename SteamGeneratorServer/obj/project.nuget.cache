@@ -1,14 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "FbsvouUzeFgbPRKTK5o48OvWZkdjSVkZOmnlvO+61kQXr4LNOeakAHFlu8z2HmUl2+AHHGSEq+p7d04n+ibQcA==",
+  "dgSpecHash": "k4VEuxAFcGvhhEnFfGyPyFG3ax6lfByVGPLIuvTEHAUlpKoAg3R4Oc1eHI360C2SrXtyLld7qaNQ9CgKkDsfFg==",
   "success": true,
   "projectFilePath": "/Users/cawabunga/Documents/GitHub/asd/SteamGeneratorServer/SteamGeneratorServer/SteamGeneratorServer/SteamGeneratorServer.csproj",
   "expectedPackageFiles": [
+    "/Users/cawabunga/.nuget/packages/microsoft.data.sqlite/7.0.5/microsoft.data.sqlite.7.0.5.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/microsoft.data.sqlite.core/7.0.5/microsoft.data.sqlite.core.7.0.5.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/cawabunga/.nuget/packages/sqlite-net-pcl/1.8.116/sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/cawabunga/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
-    "/Users/cawabunga/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
-    "/Users/cawabunga/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.4/sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/sqlitepclraw.core/2.1.4/sqlitepclraw.core.2.1.4.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/cawabunga/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.4/sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.4/sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/cawabunga/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "/Users/cawabunga/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
