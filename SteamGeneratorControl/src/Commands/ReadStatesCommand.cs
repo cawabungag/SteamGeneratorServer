@@ -9,7 +9,7 @@ public class ReadStatesCommand : BaseCommand
 	public override bool IsLoop => false;
 	public override string Command => "states";
 
-	public override CommandMessage[] Execute()
+	public override async Task<CommandMessage[]> Execute()
 	{
 		_statesMessageBuffer.Clear();
 		var states = StateRequest.GetInstance().Get().Result;

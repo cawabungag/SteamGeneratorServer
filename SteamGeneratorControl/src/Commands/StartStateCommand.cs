@@ -9,7 +9,7 @@ public class StartStateCommand : BaseCommand
 	public override bool IsLoop => false;
 	public override string Command => "start";
 
-	public override CommandMessage[]? Execute()
+	public override async Task<CommandMessage[]> Execute()
 	{
 		//start heating 10
 		var stateTypeInput = Parameters[0];
@@ -28,6 +28,4 @@ public class StartStateCommand : BaseCommand
 		StateRequest.GetInstance().Post(new CreateStateDto(stateType, StateStatus.Queued, duration));
 		return new[] {new CommandMessage($"Добавлена задача", $"{stateTypeInput} {DateTimeOffset.Now}")};
 	}
-
-	
 }

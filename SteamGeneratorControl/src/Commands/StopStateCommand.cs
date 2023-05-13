@@ -9,7 +9,7 @@ public class StopStateCommand : BaseCommand
 	public override bool IsLoop => false;
 	public override string Command => "stop";
 
-	public override CommandMessage[]? Execute()
+	public override async Task<CommandMessage[]> Execute()
 	{
 		//stop 0000-0000-0000-0000
 		var stateRequest = StateRequest.GetInstance();
@@ -21,7 +21,7 @@ public class StopStateCommand : BaseCommand
 			return null;
 		}
 
-		stateRequest.Put(new UpdateStateDto(StateStatus.Finished, guid));
+		stateRequest.Put(new UpdateStateDto(StateStatus.Finished, guid), guid);
 		return new[] {new CommandMessage($"Остановлена задача", $"{guid} {DateTimeOffset.Now}")};
 	}
 }

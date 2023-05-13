@@ -40,13 +40,22 @@ public abstract class BaseRequest<TEntity, TCreate, TUpdate, TRequest> : Singlet
 			return;
 	}
 
-	public async Task Put(TUpdate entity)
+	public async Task Put(TUpdate entity, Guid guid)
 	{
-		var url = $"{Utils.URL}{Endpoint}";
+		var url = $"{Utils.URL}{Endpoint}/{guid}";
 		var json = JsonConvert.SerializeObject(entity);
 		var content = new StringContent(json, Encoding.UTF8, "application/json");
 		var response = await _httpClient.PutAsync(url, content);
 
+		if (!response.IsSuccessStatusCode)
+			return;
+	}
+
+	public async Task Delete(Guid guid)
+	{
+		var url = $"{Utils.URL}{Endpoint}/{guid}";
+		Console.WriteLine($"Server: Удаление {guid}");
+		var response = await _httpClient.DeleteAsync(url);
 		if (!response.IsSuccessStatusCode)
 			return;
 	}

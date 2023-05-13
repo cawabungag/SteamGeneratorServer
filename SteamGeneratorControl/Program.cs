@@ -7,11 +7,13 @@ var readMeasureCommand = new ReadMeasureCommand();
 var statrtStateCommand = new StartStateCommand();
 var readStatesCommand = new ReadStatesCommand();
 var stopStateCommand = new StopStateCommand();
+var resetStateCommand = new ResetCommand();
 
 commands.Add(readMeasureCommand.Command, readMeasureCommand);
 commands.Add(statrtStateCommand.Command, statrtStateCommand);
 commands.Add(readStatesCommand.Command, readStatesCommand);
 commands.Add(stopStateCommand.Command, stopStateCommand);
+commands.Add(resetStateCommand.Command, resetStateCommand);
 
 Task ReadLine()
 {
@@ -44,7 +46,7 @@ while (true)
 {
 	if (currentCommand != null)
 	{
-		var messages = currentCommand.Execute();
+		var messages = await currentCommand.Execute();
 		if (messages == null)
 		{
 			Console.WriteLine($"Не удвлось выполнить команду: {currentCommand.Command}");
@@ -63,6 +65,13 @@ while (true)
 		{
 			currentCommand = null;
 			Task.Run(ReadLine);
+		}
+
+		if (currentCommand != null)
+		{
+			if (messages == null || messages.Length == 0)
+				if (currentCommand.IsLoop)
+					Task.Run(ReadLine);
 		}
 	}
 

@@ -10,7 +10,7 @@ public class ReadMeasureCommand : BaseCommand
 	public override bool IsLoop => true;
 	public override string Command => "measure";
 
-	public override CommandMessage[]? Execute()
+	public override async Task<CommandMessage[]> Execute()
 	{
 		_measuresMessageBuffer.Clear();
 
