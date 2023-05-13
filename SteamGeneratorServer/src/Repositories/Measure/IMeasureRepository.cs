@@ -1,12 +1,10 @@
-using FinanceService.Controllers.Entities.Measure;
-
-namespace DailySpendingBot.Repositories;
+namespace SteamGeneratorServer.Repositories.Measure;
 
 public interface IMeasureRepository
 {
-	Task<IEnumerable<Measure>> GetMeasuresAsync();
-	Task<Measure?> GetMeasureAsync(Guid id);
-	Task CreateMeasureAsync(Measure item);
-	Task UpdateMeasureAsync(Measure item);
+	Task<IEnumerable<Entities.Measure.Measure>> GetMeasuresAsync();
+	Task<Entities.Measure.Measure?> GetMeasureAsync(Guid id);
+	Task CreateMeasureAsync(Entities.Measure.Measure item);
+	Task UpdateMeasureAsync(Entities.Measure.Measure item);
 	Task DeleteMeasureAsync(Guid id);
 }

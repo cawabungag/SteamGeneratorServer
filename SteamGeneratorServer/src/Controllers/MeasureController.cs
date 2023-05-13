@@ -1,8 +1,9 @@
-using DailySpendingBot.Repositories;
-using FinanceService.Controllers.Entities.Measure;
 using Microsoft.AspNetCore.Mvc;
+using SteamGeneratorServer.Entities.Measure;
+using SteamGeneratorServer.Repositories.Measure;
+using SteamGeneratorServer.Utils;
 
-namespace FinanceService.Controllers;
+namespace SteamGeneratorServer.Controllers;
 
 [ApiController]
 [Route("measures")]
@@ -46,7 +47,7 @@ public class MeasureController : ControllerBase
 			Id = Guid.NewGuid(),
 			Title = measureDto.Title,
 			Value = measureDto.Value,
-			CreatedDate = DateTimeOffset.Now
+			CreatedDate = DateTimeOffset.UtcNow
 		};
 		await _measuresRepository.CreateMeasureAsync(newMeasure);
 

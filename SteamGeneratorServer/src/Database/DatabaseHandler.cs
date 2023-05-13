@@ -1,5 +1,8 @@
 ﻿using SQLite;
-using SteamGeneratorServer.Entities;
+using SteamGeneratorServer.Entities.Measure;
+using SteamGeneratorServer.Entities.State;
+
+namespace SteamGeneratorServer.Database;
 
 public class DatabaseHandler
 {
@@ -10,5 +13,6 @@ public class DatabaseHandler
 		var dbPath = Path.Combine(environmentPath, "simulator.db");
 		Db = new SQLiteConnection(dbPath);
 		Db.CreateTable<State>();
+		Db.CreateTable<Measure>();
 	}
 }

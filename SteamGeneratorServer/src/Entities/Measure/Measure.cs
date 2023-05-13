@@ -1,6 +1,6 @@
 using SQLite;
 
-namespace FinanceService.Controllers.Entities.Measure;
+namespace SteamGeneratorServer.Entities.Measure;
 
 public record Measure
 {

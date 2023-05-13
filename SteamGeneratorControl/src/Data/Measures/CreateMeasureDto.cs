@@ -1,13 +1,13 @@
-using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
-namespace SteamGeneratorServer.Entities.Measure;
+namespace FinanceService.Controllers.Entities.Measure;
 
 public class CreateMeasureDto
 {
-	[Required]
+	[JsonProperty("title")]
 	public string Title { get; }
 
-	[Required]
+	[JsonProperty("valve")]
 	public float Value { get; }
 
 	public CreateMeasureDto(string title, float value)

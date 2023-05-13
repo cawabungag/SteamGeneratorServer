@@ -1,16 +1,17 @@
-using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
+using SteamGeneratorServer.Entities.State;
 
-namespace SteamGeneratorServer.Entities.State;
+namespace SteamGeneratorServer.Entities;
 
 public class CreateStateDto
 {
-	[Required]
+	[JsonProperty("type")]
 	public StateType Type { get; }
 
-	[Required]
+	[JsonProperty("status")]
 	public StateStatus Status { get; }
 
-	[Required]
+	[JsonProperty("duration")]
 	public float Duration { get; }
 
 	public CreateStateDto(StateType type, StateStatus status, float duration)

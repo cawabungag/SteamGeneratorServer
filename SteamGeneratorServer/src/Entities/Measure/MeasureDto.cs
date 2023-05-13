@@ -1,4 +1,4 @@
-namespace FinanceService.Controllers.Entities.Measure;
+namespace SteamGeneratorServer.Entities.Measure;
 
 public class MeasureDto
 {

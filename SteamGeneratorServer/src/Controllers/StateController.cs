@@ -1,8 +1,9 @@
-using DailySpendingBot.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using SteamGeneratorServer.Entities;
+using SteamGeneratorServer.Entities.State;
+using SteamGeneratorServer.Repositories.State;
+using SteamGeneratorServer.Utils;
 
-namespace FinanceService.Controllers;
+namespace SteamGeneratorServer.Controllers;
 
 [ApiController]
 [Route("states")]
@@ -10,9 +11,9 @@ public class StateController : ControllerBase
 {
 	private readonly IStateRepository _statesRepository;
 
-	public StateController(IStateRepository StatesRepository)
+	public StateController(IStateRepository statesRepository)
 	{
-		_statesRepository = StatesRepository;
+		_statesRepository = statesRepository;
 	}
 
 	//GET /States
@@ -28,13 +29,13 @@ public class StateController : ControllerBase
 	[HttpGet("{id}")]
 	public async Task<ActionResult<StateDto>> GetStateAsync(Guid id)
 	{
-		var State = await _statesRepository.GetStateAsync(id);
-		if (State is null)
+		var state = await _statesRepository.GetStateAsync(id);
+		if (state is null)
 		{
 			return NotFound();
 		}
 
-		return State.AsDto();
+		return state.AsDto();
 	}
 
 	//POST /States
@@ -47,7 +48,7 @@ public class StateController : ControllerBase
 			Type = stateDto.Type,
 			Status = stateDto.Status,
 			Duration = stateDto.Duration,
-			CreatedDate = DateTimeOffset.Now
+			CreatedDate = DateTimeOffset.UtcNow
 		};
 		await _statesRepository.CreateStateAsync(newState);
 

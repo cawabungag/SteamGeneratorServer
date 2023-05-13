@@ -1,4 +1,4 @@
-namespace SteamGeneratorServer.Entities;
+namespace SteamGeneratorServer.Entities.State;
 
 public class StateDto
 {

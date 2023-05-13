@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace SteamGeneratorServer.Entities;
+namespace SteamGeneratorServer.Entities.State;
 
 public class UpdateStateDto
 {

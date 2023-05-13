@@ -1,7 +1,7 @@
-﻿using FinanceService.Controllers.Entities.Measure;
-using SteamGeneratorServer.Entities;
+﻿using SteamGeneratorServer.Entities.Measure;
+using SteamGeneratorServer.Entities.State;
 
-namespace FinanceService;
+namespace SteamGeneratorServer.Utils;
 
 public static class Extentions
 {

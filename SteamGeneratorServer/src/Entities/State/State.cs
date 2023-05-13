@@ -1,6 +1,6 @@
 using SQLite;
 
-namespace SteamGeneratorServer.Entities;
+namespace SteamGeneratorServer.Entities.State;
 
 public record State
 {
@@ -23,6 +23,7 @@ public record State
 
 public enum StateType
 {
+	None = -1,
 	Heating,
 	Maintenance,
 	Сooling
