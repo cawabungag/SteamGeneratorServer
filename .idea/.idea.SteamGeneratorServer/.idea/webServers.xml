@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="760b695c-fdb4-4129-afcd-2abada3c9606" name="yandex" url="http://51.250.17.165">
+        <fileTransfer rootFolder="/home/cawa/app" accessType="SFTP" host="51.250.17.165" port="22" sshConfigId="79951f4f-c249-4088-81b4-a8743c850217" sshConfig="cawa@51.250.17.165:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

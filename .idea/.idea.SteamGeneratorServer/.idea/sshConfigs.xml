@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="51.250.17.165" id="79951f4f-c249-4088-81b4-a8743c850217" keyPath="$USER_HOME$/Desktop/asd/steam" port="22" nameFormat="DESCRIPTIVE" username="cawa" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

@@ -26,7 +26,9 @@ public enum StateType
 	None = -1,
 	Heating,
 	Maintenance,
-	Сooling
+	Open,
+	Close,
+	PluggingIn
 }
 
 public enum StateStatus

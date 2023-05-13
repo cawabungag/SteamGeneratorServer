@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="yandex" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="yandex">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/Program.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/SteamGeneratorControl.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/obj/Debug/net6.0/SteamGeneratorControl.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/obj/Debug/net6.0/SteamGeneratorControl.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/obj/Debug/net6.0/SteamGeneratorControl.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/CommandMessage.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Commands/BaseCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Commands/ReadMeasureCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Commands/ReadStatesCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Commands/ResetCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Commands/StartStateCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Commands/StopStateCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Data/Measures/CreateMeasureDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Data/Measures/Measure.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Data/Measures/UpdateMeasureDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Data/States/CreateStateDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Data/States/State.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Data/States/UpdateStateDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Requests/BaseRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Requests/MeasuresRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Requests/StateRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Singletone.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorControl/src/Utils.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer.sln" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/Program.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/Properties/launchSettings.json" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/SteamGeneratorServer.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/appsettings.Development.json" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/appsettings.json" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/obj/Debug/net6.0/SteamGeneratorServer.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/obj/Debug/net6.0/SteamGeneratorServer.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/obj/Debug/net6.0/SteamGeneratorServer.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/simulator.db" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Controllers/MeasureController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Controllers/StateController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Database/DatabaseHandler.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Entities/Measure/CreateMeasureDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Entities/Measure/Measure.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Entities/Measure/MeasureDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Entities/Measure/UpdateMeasureDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Entities/State/CreateStateDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Entities/State/State.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Entities/State/StateDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Entities/State/UpdateStateDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Repositories/Measure/IMeasureRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Repositories/Measure/MeasureRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Repositories/State/IStateRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Repositories/State/StateRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/SteamGeneratorServer/src/Utils/Extentions.cs" web="/" />
+            <mapping local="/usr/local/share/dotnet/sdk/6.0.100/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_6_default.editorconfig" web="/" />
+            <mapping local="/usr/local/share/dotnet/sdk/6.0.100/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_6_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

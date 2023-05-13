@@ -13,22 +13,16 @@ services.AddSingleton<IStateRepository, StateRepository>();
 services.AddSingleton<IMeasureRepository, MeasureRepository>();
 services.AddControllers();
 
-builder.Services.AddEndpointsApiExplorer();
-
 services.AddSwaggerGen(c
 	=> c.SwaggerDoc("v1", new OpenApiInfo {Title = "Steam Generator Server", Version = "v1"}));
 
 var app = builder.Build();
 app.UseSwagger();
-app.UseSwaggerUI(c => {
+app.UseSwaggerUI(c =>
+{
 	c.RoutePrefix = string.Empty;
 	c.SwaggerEndpoint("/swagger/v1/swagger.json", "Steam Generator API API v1");
 });
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
-app.UseAuthorization();
 
 app.MapControllers();
 
