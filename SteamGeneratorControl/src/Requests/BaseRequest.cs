@@ -7,8 +7,14 @@ public abstract class BaseRequest<TEntity, TCreate, TUpdate, TRequest> : Singlet
 {
 	protected abstract string Endpoint { get; }
 	private static TRequest? _instance;
-	private HttpClient _httpClient = new();
+	private readonly HttpClient _httpClient = new();
 
+	public BaseRequest()
+	{
+		HttpClientHandler clientHandler = new HttpClientHandler();
+		clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+		_httpClient = new HttpClient(clientHandler);
+	}
 	public new static TRequest GetInstance()
 	{
 		if (_instance == null)

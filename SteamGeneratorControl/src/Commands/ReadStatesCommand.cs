@@ -12,7 +12,7 @@ public class ReadStatesCommand : BaseCommand
 	public override async Task<CommandMessage[]> Execute()
 	{
 		_statesMessageBuffer.Clear();
-		var states = StateRequest.GetInstance().Get().Result;
+		var states = await StateRequest.GetInstance().Get();
 
 		if (states == null)
 			return null;

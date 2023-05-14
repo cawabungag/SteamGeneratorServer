@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.OpenApi.Models;
 using SteamGeneratorServer.Controllers;
 using SteamGeneratorServer.Database;
@@ -25,5 +26,13 @@ app.UseSwaggerUI(c =>
 });
 
 app.MapControllers();
+app.UseHttpsRedirection();
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+	ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
+app.UseRouting();
+app.UseAuthorization();
+app.UseStaticFiles();
 
 app.Run();
