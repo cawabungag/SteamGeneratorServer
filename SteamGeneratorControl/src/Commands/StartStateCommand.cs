@@ -13,8 +13,7 @@ public class StartStateCommand : BaseCommand
 	{
 		//start heating 10
 		var stateTypeInput = Parameters[0];
-		var durationInput = Parameters[1];
-		
+
 		var stateType = stateTypeInput.ToStateType();
 		if (stateType == StateType.None)
 		{
@@ -22,14 +21,28 @@ public class StartStateCommand : BaseCommand
 			return null;
 		}
 
-		if (!float.TryParse(durationInput, out var duration) 
-			&& stateType != StateType.Close 
+		if (Parameters.Length == 1
+			&& stateType != StateType.Close
 			&& stateType != StateType.Open
-			&& stateType != StateType.PluggingIn)
-		{
-			Console.WriteLine("Неправильно указана длительность операции");
+			&& stateType != StateType.PluggingIn
+			&& stateType != StateType.PluggingOut)
 			return null;
+
+		float duration = 0;
+		if (Parameters.Length > 1)
+		{
+			var durationInput = Parameters[1];
+			if (!float.TryParse(durationInput, out duration)
+				&& stateType != StateType.Close
+				&& stateType != StateType.Open
+				&& stateType != StateType.PluggingIn
+				&& stateType != StateType.PluggingOut)
+			{
+				Console.WriteLine("Неправильно указана длительность операции");
+				return null;
+			}
 		}
+
 
 		StateRequest.GetInstance().Post(new CreateStateDto(stateType, StateStatus.Queued, duration));
 		return new[] {new CommandMessage($"Добавлена задача", $"{stateTypeInput} {DateTimeOffset.Now}")};

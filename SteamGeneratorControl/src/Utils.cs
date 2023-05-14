@@ -30,6 +30,10 @@ public static class Utils
 			case "plugin":
 				stateType = StateType.PluggingIn;
 				break;
+			
+			case "plugout":
+				stateType = StateType.PluggingOut;
+				break;
 
 			default:
 				Console.WriteLine("Неправильно указан тип операции");

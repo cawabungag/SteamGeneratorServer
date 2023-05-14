@@ -28,7 +28,8 @@ public enum StateType
 	Maintenance,
 	Open,
 	Close,
-	PluggingIn
+	PluggingIn,
+	PluggingOut
 }
 
 public enum StateStatus

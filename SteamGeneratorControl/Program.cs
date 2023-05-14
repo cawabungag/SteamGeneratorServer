@@ -30,7 +30,17 @@ Task ReadLine()
 		if (commands.TryGetValue(parameters[0], out var command))
 		{
 			currentCommand = command;
-			currentCommand.SetParams(parameters[1], parameters[2]);
+			switch (parameters.Length)
+			{
+				case 2:
+					currentCommand.SetParams(parameters[1]);
+					break;
+
+				case 3:
+					currentCommand.SetParams(parameters[1], parameters[2]);
+					break;
+			}
+
 			Console.WriteLine("Команда: " + inputCommand + " добавлена");
 		}
 		else
@@ -54,24 +64,27 @@ while (true)
 			Task.Run(ReadLine);
 		}
 
-		foreach (var message in messages)
+		if (messages != null)
 		{
-			// Console.BackgroundColor = message.Color;
-			Console.WriteLine($"{message.Title} {message.Description}");
-			Console.ResetColor();
-		}
+			foreach (var message in messages)
+			{
+				// Console.BackgroundColor = message.Color;
+				Console.WriteLine($"{message.Title} {message.Description}");
+				Console.ResetColor();
+			}
 
-		if (!currentCommand.IsLoop)
-		{
-			currentCommand = null;
-			Task.Run(ReadLine);
-		}
+			if (!currentCommand.IsLoop)
+			{
+				currentCommand = null;
+				Task.Run(ReadLine);
+			}
 
-		if (currentCommand != null)
-		{
-			if (messages == null || messages.Length == 0)
-				if (currentCommand.IsLoop)
-					Task.Run(ReadLine);
+			if (currentCommand != null)
+			{
+				if (messages == null || messages.Length == 0)
+					if (currentCommand.IsLoop)
+						Task.Run(ReadLine);
+			}
 		}
 	}
 
