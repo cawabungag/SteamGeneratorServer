@@ -21,6 +21,7 @@ public abstract class BaseRequest<TEntity, TCreate, TUpdate, TRequest> : Singlet
 		var url = $"{Utils.URL}{Endpoint}";
 		var response = await _httpClient.GetAsync(url);
 
+		Console.WriteLine($"Code status: {response.StatusCode}");
 		if (!response.IsSuccessStatusCode)
 			return null;
 
@@ -35,6 +36,7 @@ public abstract class BaseRequest<TEntity, TCreate, TUpdate, TRequest> : Singlet
 		var json = JsonConvert.SerializeObject(entity);
 		var content = new StringContent(json, Encoding.UTF8, "application/json");
 		var response = await _httpClient.PostAsync(url, content);
+		Console.WriteLine($"Code status: {response.StatusCode}");
 
 		if (!response.IsSuccessStatusCode)
 			return;
@@ -46,6 +48,7 @@ public abstract class BaseRequest<TEntity, TCreate, TUpdate, TRequest> : Singlet
 		var json = JsonConvert.SerializeObject(entity);
 		var content = new StringContent(json, Encoding.UTF8, "application/json");
 		var response = await _httpClient.PutAsync(url, content);
+		Console.WriteLine($"Code status: {response.StatusCode}");
 
 		if (!response.IsSuccessStatusCode)
 			return;
@@ -56,6 +59,8 @@ public abstract class BaseRequest<TEntity, TCreate, TUpdate, TRequest> : Singlet
 		var url = $"{Utils.URL}{Endpoint}/{guid}";
 		Console.WriteLine($"Server: Удаление {guid}");
 		var response = await _httpClient.DeleteAsync(url);
+		Console.WriteLine($"Code status: {response.StatusCode}");
+
 		if (!response.IsSuccessStatusCode)
 			return;
 	}
