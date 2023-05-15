@@ -1,4 +1,3 @@
-using System.Net;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.OpenApi.Models;
 using SteamGeneratorServer.Controllers;
@@ -16,33 +15,22 @@ services.AddSingleton<IMeasureRepository, MeasureRepository>();
 services.AddControllers();
 
 services.AddSwaggerGen(c
-    => c.SwaggerDoc("v1", new OpenApiInfo { Title = "Steam Generator Server", Version = "v1" }));
-
-
-builder.Services.AddAuthentication();
-
-builder.Services.AddHttpsRedirection(options =>
-{
-    options.RedirectStatusCode = (int)HttpStatusCode.TemporaryRedirect;
-    options.HttpsPort = 5001;
-});
+	=> c.SwaggerDoc("v1", new OpenApiInfo {Title = "Steam Generator Server", Version = "v1"}));
 
 var app = builder.Build();
-
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.RoutePrefix = string.Empty;
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Steam Generator API API v1");
+	c.RoutePrefix = string.Empty;
+	c.SwaggerEndpoint("/swagger/v1/swagger.json", "Steam Generator API API v1");
 });
 
 app.MapControllers();
-
+app.UseHttpsRedirection();
 app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
-    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+	ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 });
-
 app.UseRouting();
 app.UseAuthorization();
 app.UseStaticFiles();
